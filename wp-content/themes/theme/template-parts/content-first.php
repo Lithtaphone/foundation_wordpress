@@ -12,15 +12,12 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
 	<header>
-		<?php the_category(","); ?>
-		<?php the_date(); ?>
-
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
+		<p><?php the_category(); ?></p>
+		<h2>First<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<?php foundationpress_entry_meta(); ?>
 	</header>
 	<div class="entry-content">
-		<?php the_excerpt(); ?>
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
 	</div>
 	<footer>
 		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
