@@ -17,6 +17,14 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
@@ -39,7 +47,7 @@
 			<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 				<div class="top-bar-left">
 					<ul class="menu">
-						<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+						<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?><img src="assets/images/home.png" alt="Home" /></a></li>
 					</ul>
 				</div>
 				<div class="top-bar-right">
@@ -50,7 +58,7 @@
 					<?php endif; ?>
 				</div>
 			</nav>
-		</div>	
+		</div>
 	</header>
 
 	<section class="container">
