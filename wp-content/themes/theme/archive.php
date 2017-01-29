@@ -18,6 +18,7 @@
 get_header(); ?>
 
 <div id="page" role="main">
+	<h1>Je suis dans archive....</h1>
 	<article class="main-content">
 	<?php if ( have_posts() ) : ?>
 

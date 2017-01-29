@@ -19,10 +19,28 @@
 	<header>
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 	</header>
-	<?php get_template_part('template-parts/img');?>
+	<?php get_template_part('template-parts/img'); ?>
+
 
 
 	<div class="entry-content">
+		<div class="row">
+ +			<?php do_action ('my_gallery'); ?>
+ +			<?php /* The loop */
+ +				if ( get_post_gallery() ) :
+ +					$gallery = get_post_gallery( get_the_ID(), false );
+ +
+ +	            /* Loop through all the image and output them one by one */
+ +	            foreach( $gallery['src'] as $src ) : ?>
+ +	                <img src="<?php echo $src; ?>" class="my-custom-class" alt="Gallery image" />
+ +	                <?php
+ +	            endforeach;
+ +				endif;
+ +			?>
+ +
+ +		</div>
+
+
 		<?php the_excerpt(); ?>
 		<a href="<?php the_permalink(); ?>">Lire la suite...</a>
 	</div>

@@ -24,16 +24,19 @@
 
 // Tablet and desktop menu
 .top-bar {
-  margin-top: 431px;
+  background: url('../images/bg-menu.png') no-repeat top left;
+
   .menu .home a {
-    font-size: 1rem;
-    background: #004a5f;
+    color: #ffffff;
+    margin-left: -3px;
+    transform: rotate(-10deg);
+    transform-origin: 50% 50%;
   }
 
   .menu a {
-    height: 45px;
-    line-height: 45px;
-    color: #e6e6e6;
+    height: 60px;
+    line-height: 60px;
+    color: #ffffff;
     padding-top: 0;
     padding-bottom: 0;
     font-weight: bold;
@@ -41,16 +44,17 @@
     line-height: 1;
 
     &:hover:not(.button) {
-      background-color: #2a2a2a;
+      text-decoration: underline;
+      //background-color: #2a2a2a;
     }
   }
 
   .menu>li:not(.menu-text)>a {
-    padding: 1rem;
+    padding: 1.9rem 1rem .8rem 1rem;
   }
 
   .menu li:not(:last-child) {
-    border-right: 1px solid #4e4e4e;
+    //border-right: 1px solid #4e4e4e;
   }
 
   .dropdown.menu .submenu {

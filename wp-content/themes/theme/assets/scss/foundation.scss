@@ -75,8 +75,12 @@
   Add your scss files below to structure your project styles
 */
 
+@import "vendor/animate";
+
+
 // Modules
 @import "modules/navigation";
+@import "modules/header";
 @import "modules/footer";
 @import "modules/sidebar";
 @import "modules/editor-style";

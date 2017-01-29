@@ -16,18 +16,17 @@
 get_header(); ?>
 
 <div id="page" role="main">
+
 	<article class="main-content">
 	<?php if ( have_posts() ) :
-						$cpt = 0;
-		?>
+					$cpt = 0;
+	?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); $cpt++;
-
-
-					$tpl = ( ($cpt == 1) && !is_paged() )? 'first' : get_post_format() ;
-		?>
-			<?php get_template_part( 'template-parts/content', $tpl); ?>
+					$tpl = ( ($cpt == 1) && !is_paged() ) ? 'first' : get_post_format() ;
+		 ?>
+			<?php get_template_part( 'template-parts/content',  $tpl); ?>
 		<?php endwhile; ?>
 
 		<?php else : ?>

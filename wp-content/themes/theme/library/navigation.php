@@ -10,6 +10,7 @@
 register_nav_menus(array(
 	'top-bar-r'  => 'Right Top Bar',
 	'mobile-nav' => 'Mobile',
+	'footer-nav' => 'Menu Footer'
 ));
 
 
@@ -23,7 +24,8 @@ if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
 		wp_nav_menu( array(
 			'container'      => false,
 			'menu_class'     => 'dropdown menu',
-			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+			//'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+			'items_wrap'     => '%3$s',
 			'theme_location' => 'top-bar-r',
 			'depth'          => 3,
 			'fallback_cb'    => false,

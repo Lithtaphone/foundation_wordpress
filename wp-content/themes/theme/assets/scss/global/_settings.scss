@@ -62,7 +62,7 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: Georgia, 'Times New Roman', serif;
+$body-font-family: Georgia, 'Times new Roman', serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -558,7 +558,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
-$topbar-background: #121212;
+$topbar-background: transparent; //#F00;
 $topbar-submenu-background: $topbar-background;
 $topbar-link-color: #fff;
 $topbar-input-width: 200px;
