@@ -24,16 +24,15 @@
 
 // Tablet and desktop menu
 .top-bar {
-  margin-top: 431px;
   .menu .home a {
-    font-size: 1rem;
-    background: #004a5f;
+    color: #fff;
+    
   }
 
   .menu a {
-    height: 45px;
-    line-height: 45px;
-    color: #e6e6e6;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
     padding-top: 0;
     padding-bottom: 0;
     font-weight: bold;
@@ -46,11 +45,11 @@
   }
 
   .menu>li:not(.menu-text)>a {
-    padding: 1rem;
+    padding: 1.8rem 1rem .8rem 1rem;
   }
 
   .menu li:not(:last-child) {
-    border-right: 1px solid #4e4e4e;
+    //border-right: 1px solid #4e4e4e;
   }
 
   .dropdown.menu .submenu {

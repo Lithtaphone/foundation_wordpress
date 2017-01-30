@@ -23,6 +23,11 @@
 
 
 	<div class="entry-content">
+		<div class="row">
+
+			<?php do_action('my_gallery', 'gallery'); ?>
+
+ 		</div>
 		<?php the_excerpt(); ?>
 		<a href="<?php the_permalink(); ?>">Lire la suite...</a>
 	</div>

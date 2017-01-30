@@ -49,3 +49,16 @@ require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
+
+function gallery () {
+  if ( get_post_gallery() ) :
+    $gallery = get_post_gallery( get_the_ID(), false );
+
+        foreach( $gallery['src'] as $src ) : ?>
+            <img src="<?php echo $src; ?>" class="my-custom-class" alt="Gallery image" />
+            <?php
+        endforeach;
+        endif;
+}
+
+add_action('my_gallery', 'gallery');
