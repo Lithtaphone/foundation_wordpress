@@ -17,14 +17,10 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
@@ -43,9 +39,9 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</div>
 			</div>
-
 			<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 				<div class="top-bar-left">
+<<<<<<< HEAD
 					<ul class="menu dropdown">
 						<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 						<?php foundationpress_top_bar_r(); ?>
@@ -53,6 +49,14 @@
 				</div>
 				<div class="top-bar-right">
 
+=======
+					<ul class="dropdown menu">
+						<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo('name'); ?>"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+						<?php foundationpress_top_bar_r(); ?>
+					</ul>
+				</div>
+				<div class="top-bar-right text-left">
+>>>>>>> origin/master
 					<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
 						<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
 					<?php endif; ?>
@@ -62,4 +66,5 @@
 	</header>
 
 	<section class="container">
+
 		<?php do_action( 'foundationpress_after_header' );

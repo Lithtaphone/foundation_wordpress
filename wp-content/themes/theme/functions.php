@@ -50,6 +50,7 @@ require_once( 'library/responsive-images.php' );
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
 
+<<<<<<< HEAD
 function gallery () {
   if ( get_post_gallery() ) :
     $gallery = get_post_gallery( get_the_ID(), false );
@@ -62,3 +63,38 @@ function gallery () {
 }
 
 add_action('my_gallery', 'gallery');
+=======
+function monaction()
+{
+    ?>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <?php
+
+}
+//add_action('foundationpress_after_body', 'monaction');
+
+function my_title($title)
+{
+  $tmp = explode('|', $title);
+  if(count($tmp) > 1)
+  {
+    $title = $tmp[0].'...';//.$tmp[1];
+  }
+  return $title;
+}
+add_filter('the_title', 'my_title', 1, 1);
+
+function my_menu($var1)
+{
+  $var1['menu_class'] = 'menu vertical';
+  return $var1;
+}
+add_filter('widget_nav_menu_args', 'my_menu', 1, 1);
+>>>>>>> origin/master
