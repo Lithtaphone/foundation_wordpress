@@ -24,34 +24,15 @@
 
 // Tablet and desktop menu
 .top-bar {
-<<<<<<< HEAD
   .menu .home a {
     color: #fff;
     
-=======
-  background: url('../images/bg-menu.png') no-repeat top left;
-
-  .menu .home a {
-    color: #ffffff;
-    margin-left: -3px;
-    transform: rotate(-10deg);
-    transform-origin: 50% 50%;
->>>>>>> origin/master
   }
 
   .menu a {
     height: 60px;
     line-height: 60px;
-<<<<<<< HEAD
     color: #fff;
-=======
-    color: #ffffff;
->>>>>>> origin/master
-    padding-top: 0;
-    padding-bottom: 0;
-    font-weight: bold;
-    font-size: 0.8rem;
-    line-height: 1;
 
     &:hover:not(.button) {
       text-decoration: underline;
@@ -60,11 +41,8 @@
   }
 
   .menu>li:not(.menu-text)>a {
-<<<<<<< HEAD
     padding: 1.8rem 1rem .8rem 1rem;
-=======
-    padding: 1.9rem 1rem .8rem 1rem;
->>>>>>> origin/master
+
   }
 
   .menu li:not(:last-child) {
