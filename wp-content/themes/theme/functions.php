@@ -50,15 +50,24 @@ require_once( 'library/responsive-images.php' );
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
 
-function gallery () {
-  if ( get_post_gallery() ) :
-    $gallery = get_post_gallery( get_the_ID(), false );
+function affichage_diaporama($id)
+ {
+       // Balisage pour avoir une ligne responsive d'images
+        $html = '<div class="row collapse hide-for-small-only medium-up-4 large-up-7">';
 
-        foreach( $gallery['src'] as $src ) : ?>
-            <img src="<?php echo $src; ?>" class="my-custom-class" alt="Gallery image" />
-            <?php
-        endforeach;
-        endif;
-}
+      // Récupération des images de la galerie
+        $images_galeries = get_post_gallery_images($id);
 
-add_action('my_gallery', 'gallery');
+       // Pour chaque item du tableau, on update le HTML
+       foreach($images_galeries as $image)
+        {
+          $html .= '<div class="column"><img src="'.$image.'" class="thumbnail" alt=""></div>';
+       }
+
+      // Ici on ferme la rangée...
+        $html .= '</div>';
+
+        echo $html;
+ }
+
+ add_action('avant_le_contenu_de_larticle', 'affichage_diaporama');

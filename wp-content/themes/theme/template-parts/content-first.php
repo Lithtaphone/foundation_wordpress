@@ -24,8 +24,5 @@
 
 
 	<div class="entry-content">
-		<div class="row">
-
-			<?php do_action('my_gallery', 'gallery'); ?>
-
- 		</div>
+				<?php do_action('avant_le_contenu_de_larticle', $post->ID); ?>
+	</div>
